@@ -1,4 +1,4 @@
-﻿namespace ShareX
+﻿namespace ShareX.HelpersLib
 {
     partial class Form1
     {
@@ -36,4 +36,3 @@
         #endregion
     }
 }
-
