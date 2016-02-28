@@ -14,7 +14,7 @@ namespace ShareX.HelpersLib
 {
 
     // TODO: 修改为BlackStyleForm
-    public partial class DownloaderForm : BaseForm
+    public partial class DownloaderForm : BlackStyleForm
     {
         public delegate void DownloaderInstallEventHandler(string filePath);
         public event DownloaderInstallEventHandler InstallRequested;
