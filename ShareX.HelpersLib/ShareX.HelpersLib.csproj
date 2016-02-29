@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\CaptureHelpers.cs" />
+    <Compile Include="ClipboardFormat.cs" />
     <Compile Include="Controls\BlackStyle\BlackStyleButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -62,27 +64,24 @@
     <Compile Include="Controls\Canvas.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DebugHelper.cs" />
-    <Compile Include="DownloaderForm.cs">
+    <Compile Include="DebugHelper\DebugHelper.cs" />
+    <Compile Include="Extensions\NumberExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="UpdateChecker\DownloaderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DownloaderForm.Designer.cs">
+    <Compile Include="UpdateChecker\DownloaderForm.Designer.cs">
       <DependentUpon>DownloaderForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FileDownloader.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GitHubUpdateChecker.cs" />
+    <Compile Include="UpdateChecker\FileDownloader.cs" />
+    <Compile Include="UpdateChecker\GitHubUpdateChecker.cs" />
     <Compile Include="Extensions\Extensions.cs" />
-    <Compile Include="HelperOptions.cs" />
+    <Compile Include="Helpers\HelperOptions.cs" />
     <Compile Include="Helpers\Helpers.cs" />
     <Compile Include="Helpers\URLHelpers.cs" />
-    <Compile Include="Logger.cs" />
-    <Compile Include="ProxyInfo.cs" />
+    <Compile Include="DebugHelper\Logger.cs" />
+    <Compile Include="Helpers\ProxyInfo.cs" />
+    <Compile Include="SettingsBase.cs" />
     <Compile Include="TaskEx.cs" />
     <Compile Include="UpdateChecker\UpdateChecker.cs" />
     <Compile Include="UpdateChecker\UpdateCheckLabel.cs">
@@ -102,9 +101,11 @@
     </Compile>
     <Compile Include="Resources\ShareXResources.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="WindowState.cs" />
+    <Compile Include="WritablePropertiesOnlyResolver.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="DownloaderForm.resx">
+    <EmbeddedResource Include="UpdateChecker\DownloaderForm.resx">
       <DependentUpon>DownloaderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

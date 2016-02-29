@@ -10,10 +10,30 @@ namespace ShareX.HelpersLib
 {
     public static class Helpers
     {
+
+        public static readonly Version OSVersion = Environment.OSVersion.Version;
+
+        #region 版本比较
+
+        private static Version NormalizeVersion(string version)
+        {
+            return Version.Parse(version).Normalize();
+        }
+        public static int CompareVersion(string version1,string version2)
+        {
+            return NormalizeVersion(version1).CompareTo(NormalizeVersion(version2));
+        }
         public static int CompareVersion(Version version1,Version version2)
         {
             return version1.Normalize().CompareTo(version2.Normalize());
         }
+
+        public static int CompareApplicationVersion(string version)
+        {
+            return CompareVersion(version, Application.ProductVersion);
+        }
+
+        #endregion
 
         public static void CreateDirectoryFromFilePath(string path)
         {
@@ -35,6 +55,16 @@ namespace ShareX.HelpersLib
                     MessageBox.Show(Resources.Helpers_CreateDirectoryIfNotExist_Create_failed_);
                 }
             }
+        }
+
+        public static bool IsWindows10OrGreater()
+        {
+            return OSVersion.Major >= 10;
+        }
+
+        internal static bool IsWindowsVistaOrGreater()
+        {
+            return true;
         }
     }
 }

@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationConfig.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="Forms\AboutForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,8 +63,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Forms\TaskSettings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuickTaskInfo.cs" />
+    <Compile Include="RecentTask.cs" />
     <EmbeddedResource Include="Forms\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,21 +99,125 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\crown.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\au.png" />
-    <None Include="Resources\tr.png" />
-    <None Include="Resources\GitHub.png" />
     <None Include="Resources\steam.ico" />
     <None Include="Resources\Twitter.ico" />
     <None Include="Resources\steam1.ico" />
+    <None Include="Resources\application-block.png" />
+    <None Include="Resources\application-blog.png" />
+    <None Include="Resources\application-blue.png" />
+    <None Include="Resources\application-browser.png" />
+    <None Include="Resources\application-icon-large.png" />
+    <None Include="Resources\application-monitor.png" />
+    <None Include="Resources\application-network.png" />
+    <None Include="Resources\application-task.png" />
+    <None Include="Resources\arrow-090.png" />
+    <None Include="Resources\arrow-270.png" />
+    <None Include="Resources\au.png" />
+    <None Include="Resources\balloon-white.png" />
+    <None Include="Resources\barcode-2d.png" />
+    <None Include="Resources\bin.png" />
+    <None Include="Resources\br.png" />
+    <None Include="Resources\camcorder-image.png" />
+    <None Include="Resources\camcorder--pencil.png" />
+    <None Include="Resources\camera.png" />
+    <None Include="Resources\categories.png" />
+    <None Include="Resources\checkbox_check.png" />
+    <None Include="Resources\checkbox_uncheck.png" />
+    <None Include="Resources\clipboard.png" />
+    <None Include="Resources\clipboard-list.png" />
+    <None Include="Resources\clock.png" />
+    <None Include="Resources\cn.png" />
+    <None Include="Resources\color.png" />
+    <None Include="Resources\control-record.png" />
+    <None Include="Resources\control-record-yellow.png" />
+    <None Include="Resources\cross.png" />
+    <None Include="Resources\cross-button.png" />
+    <None Include="Resources\crown.png" />
+    <None Include="Resources\de.png" />
+    <None Include="Resources\diamond.png" />
+    <None Include="Resources\disk-black.png" />
+    <None Include="Resources\document-break.png" />
+    <None Include="Resources\document-copy.png" />
+    <None Include="Resources\document-globe.png" />
+    <None Include="Resources\drive.png" />
+    <None Include="Resources\drive-globe.png" />
+    <None Include="Resources\edit-scale.png" />
+    <None Include="Resources\Ellipse.png" />
+    <None Include="Resources\eraser.png" />
+    <None Include="Resources\es.png" />
+    <None Include="Resources\exclamation-button.png" />
+    <None Include="Resources\film.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\folder-open-document.png" />
+    <None Include="Resources\folder-open-image.png" />
+    <None Include="Resources\folder-tree.png" />
+    <None Include="Resources\fr.png" />
+    <None Include="Resources\FreeHand.png" />
+    <None Include="Resources\Fullscreen.png" />
+    <None Include="Resources\gear.png" />
+    <None Include="Resources\GitHub.png" />
+    <None Include="Resources\globe.png" />
+    <None Include="Resources\globe--pencil.png" />
+    <None Include="Resources\globe-share.png" />
+    <None Include="Resources\heart.png" />
+    <None Include="Resources\hu.png" />
+    <None Include="Resources\image.png" />
+    <None Include="Resources\image-export.png" />
+    <None Include="Resources\image--pencil.png" />
+    <None Include="Resources\image-saturation.png" />
+    <None Include="Resources\images-stack.png" />
+    <None Include="Resources\inbox.png" />
+    <None Include="Resources\keyboard.png" />
+    <None Include="Resources\keyboard--minus.png" />
+    <None Include="Resources\keyboard--plus.png" />
+    <None Include="Resources\kr.png" />
+    <None Include="Resources\layer.png" />
+    <None Include="Resources\layer--pencil.png" />
+    <None Include="Resources\layers-arrange.png" />
+    <None Include="Resources\layer-shape.png" />
+    <None Include="Resources\layer-shape-curve.png" />
+    <None Include="Resources\layer-shape-ellipse.png" />
+    <None Include="Resources\layer-shape-polygon.png" />
+    <None Include="Resources\layer-shape-round.png" />
+    <None Include="Resources\layers-ungroup.png" />
+    <None Include="Resources\layer-transparent.png" />
+    <None Include="Resources\layout-select.png" />
+    <None Include="Resources\layout-select-content.png" />
+    <None Include="Resources\layout-select-sidebar.png" />
+    <None Include="Resources\monitor.png" />
+    <None Include="Resources\navigation-000-button.png" />
+    <None Include="Resources\navigation-090-button.png" />
+    <None Include="Resources\network-ip.png" />
+    <None Include="Resources\nl.png" />
+    <None Include="Resources\notebook.png" />
+    <None Include="Resources\pencil.png" />
+    <None Include="Resources\pipette.png" />
+    <None Include="Resources\Polygon.png" />
+    <None Include="Resources\Rectangle.png" />
+    <None Include="Resources\robot.png" />
+    <None Include="Resources\RoundedRectangle.png" />
+    <None Include="Resources\ru.png" />
+    <None Include="Resources\ruler-triangle.png" />
+    <None Include="Resources\tick-button.png" />
+    <None Include="Resources\toolbox.png" />
+    <None Include="Resources\tr.png" />
+    <None Include="Resources\traffic-cone.png" />
+    <None Include="Resources\Triangle.png" />
+    <None Include="Resources\ui-scroll-pane-image.png" />
+    <None Include="Resources\upload-cloud.png" />
+    <None Include="Resources\us.png" />
+    <None Include="Resources\vn.png" />
+    <None Include="Resources\wrench-screwdriver.png" />
     <Content Include="ShareX_Icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ShareX.HelpersLib\ShareX.HelpersLib.csproj">
       <Project>{57120f53-5537-4a15-9616-2de73bae97f4}</Project>
       <Name>ShareX.HelpersLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShareX.UploadersLib\ShareX.UploadersLib.csproj">
+      <Project>{05e5616c-1314-4ef7-a77e-a92d3946cbbd}</Project>
+      <Name>ShareX.UploadersLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

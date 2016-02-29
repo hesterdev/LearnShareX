@@ -7,13 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ShareX.HelpersLib
+using ShareX.HelpersLib;
+using ShareX.Properties;
+
+namespace ShareX
 {
-    public partial class Form1 : BlackStyleForm
+    public partial class AboutForm :BaseForm
     {
-        public Form1()
+        public AboutForm()
         {
             InitializeComponent();
+
         }
     }
 }
